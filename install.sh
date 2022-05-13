@@ -1,4 +1,5 @@
 #!/bin/bash
+IGNORE_PATTERN="^\.(git|config|idea)"
 
 # 未定義な変数があったら途中で終了する
 set -u
@@ -18,4 +19,12 @@ for f in .??*; do
     ln -snfv ${PWD}/"$f" ~/
 done
 
+
+echo "\n========================"
+echo "create .config in $HOME"
+mkdir -p $HOME/.config
+for dotfile in $(ls -F .config | grep -v /); do
+    [[ $dotfile =~ $IGNORE_PATTERN ]] && continue
+    ln -snfv "$(pwd)/.config/$dotfile" "$HOME/.config/$dotfile"
+done
 
