@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+# ALIAS
+
+# ls
+if type "exa" > /dev/null 2>&1; then
+    alias ls='exa'
+    alias l='exa -F'
+    alias la='exa -a'
+    alias ll='exa -al'
+else
+    alias ls='ls'
+    alias l='ls -CF'
+    alias la='ls -A'
+    alias ll='ls -al'
+fi
+
+if type "bat" > /dev/null 2>&1; then
+    alias cat="bat"
+fi
+
+
+# cd
+alias cdd='cd ..'
+alias cddd='cd ../../'
+alias cdddd='cd ../../../'
+alias cddddd='cd ../../../../'
+
+# my setting
+alias d="cd ~/myproject/"
+alias cdexp="cd ~/Desktop/lab"
+
+

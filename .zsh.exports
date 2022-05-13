@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# 環境変数
+#export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
+#export LANG=C
+export SHELL=/bin/zsh
+
+typeset -U path PATH
+# PATH
+PATH=/usr/local/bin:/Library/TeX/texbin:$HOME/bin:$HOME/tools:$PATH
+export PATH
+
+# ruby 
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)";
+fi
