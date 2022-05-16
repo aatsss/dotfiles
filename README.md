@@ -1,16 +1,15 @@
-# dotfiles ーー自分用ーー
-参考にしたサイトは[ここ](./References.md)を参照
+# my dotfiles
+this repository refered to [here](./References.md).
 
 ----
 
 
-# 対象
+# subject
 OS : Mac (M1 / intel)  
-
 shell : zsh
 
 ----
 
 
-# 事前にインストールするもの
+# requirement
 
