@@ -1,6 +1,12 @@
 # Don't print a new line at the start of the prompt
 add_newline = true
 
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+format="$symbol "
+success_symbol = "[❯](bold #32cd32)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[❯](bold red) "
+
 [directory]
 truncation_length = 100
 truncate_to_repo = false
@@ -13,20 +19,14 @@ symbol = "🔺 "
 [c]
 format = "via [$name $version]($style)"
 
-
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-format="$symbol "
-success_symbol = "[❯](bold #32cd32)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red) "
-
 [git_branch]
 format = "[$symbol$branch]($style) "
 symbol = "git:"
 # style = "bold #ff8c00"
 
 [git_commit]
-disabled = true
+commit_hash_length = 4
+tag_symbol = "🔖 "
 
 [git_state]
 disabled = true
@@ -34,3 +34,12 @@ disabled = true
 [git_status]
 disabled = true
 
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[username]
+style_user = "bold blue"
+# style_root = "black bold"
+format = "[$user🌱]($style) "
+disabled = false
+show_always = true
